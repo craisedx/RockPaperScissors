@@ -85,7 +85,7 @@ namespace RPSGame
         {
 
             string[] ch = StartParams();
-            while (ch.Length < 3 && ch.Length % 2 == 1)
+            while (ch.Length < 3  || ch.Length % 2 == 0)
             {
                 ch = StartParams();
             }
