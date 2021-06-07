@@ -85,9 +85,12 @@ namespace RPSGame
         {
 
             string[] ch = StartParams();
+            ch = ch.Distinct().ToArray();
+
             while (ch.Length < 3  || ch.Length % 2 == 0)
             {
                 ch = StartParams();
+                ch = ch.Distinct().ToArray();
             }
 
 
