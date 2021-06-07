@@ -105,32 +105,6 @@ namespace RPSGame
 
             int playermove = PlayerMove(ch);
 
-            bool Acceptplayermove = false;
-
-            do
-            {
-                Console.Write("Enter your move: ");
-                string playermovestr = Console.ReadLine();
-                if (int.TryParse(playermovestr, out int number))
-                {
-                    playermove = number - 1;
-                    if (playermove >= 0 && playermove <= ch.Length)
-                    {
-                        Acceptplayermove = true;
-                    }
-                    else if (playermove == 0)
-                    {
-                        Console.WriteLine("Game is over :(");
-                        Environment.Exit(0);
-                    }
-                    else
-                    {
-                        Console.WriteLine("Not Found, Retry");
-                    }
-                }
-            }
-            while (!Acceptplayermove);
-
 
             Console.WriteLine($"You move: {ch[playermove]}");
             Console.WriteLine($"Computer move: {ch[ComputerMove]}");
